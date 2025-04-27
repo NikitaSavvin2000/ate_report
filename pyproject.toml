@@ -9,7 +9,7 @@ authors = [
 dependencies = [
     "numpy==1.26.4",
     "pandas==2.2.1",
-    "plotly==5.20.0",
+    "plotly>=6.0.1",
     "python-dotenv==1.0.1",
     "Requests==2.31.0",
     "streamlit-extras==0.4.0",
@@ -26,6 +26,7 @@ dependencies = [
     "streamlit-lottie>=0.0.5",
     "streamlit>=1.35.0",
     "extra-streamlit-components>=0.1.71",
+    "scikit-learn>=1.6.1",
 ]
 requires-python = ">=3.10"
 readme = "README.md"
