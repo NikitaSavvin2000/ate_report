@@ -21,7 +21,6 @@ path_DEKENERG_ZONE2_S_PAMURENE = os.path.join(ats_data, 'DEKENERG_ZONE2_S_PAMURE
 path_DEKENERG_ZONE2_S_PEVRAOBL = os.path.join(ats_data, 'DEKENERG_ZONE2_S_PEVRAOBL.csv')
 
 
-
 # df_ARHENERG_ZONE1_E_PARHENER = pd.read_csv(path_ARHENERG_ZONE1_E_PARHENER)
 df_DEKENERG_ZONE2_S_PAMURENE = pd.read_csv(path_DEKENERG_ZONE2_S_PAMURENE)
 df_DEKENERG_ZONE2_S_PEVRAOBL = pd.read_csv(path_DEKENERG_ZONE2_S_PEVRAOBL)
@@ -31,26 +30,26 @@ df_DEKENERG_ZONE2_S_PAMURENE = df_DEKENERG_ZONE2_S_PAMURENE.drop(columns=['Unnam
 df_DEKENERG_ZONE2_S_PEVRAOBL = df_DEKENERG_ZONE2_S_PEVRAOBL.drop(columns=['Unnamed: 0'])
 
 LSTM_path = os.path.join('src', 'data', 'LSTM')
-Bi_LSTM_path = os.path.join('src', 'data', 'Bi-LSTM')
-CNN_Bi_LSTM_path = os.path.join('src', 'data', 'CNN-Bi-LSTM')
-CNN_LSTM_path = os.path.join('src', 'data', 'CNN-LSTM')
+Bi_LSTM_path = os.path.join('src', 'data', 'Bi_LSTM')
+CNN_Bi_LSTM_path = os.path.join('src', 'data', 'CNN_Bi_LSTM')
+CNN_LSTM_path = os.path.join('src', 'data', 'CNN_LSTM')
 XGBoost_path = os.path.join('src', 'data', 'XGBoost')
 
 # path_LSTM_ARHENERG_ZONE1_E_PARHENER = os.path.join(LSTM_path, 'ARHENERG_ZONE1_E_PARHENER_LSTM_predict.csv')
 path_LSTM_DEKENERG_ZONE2_S_PAMURENE = os.path.join(LSTM_path, 'DEKENERG_ZONE2_S_PAMURENE_LSTM_predict.csv')
 path_LSTM_DEKENERG_ZONE2_S_PEVRAOBL = os.path.join(LSTM_path, 'DEKENERG_ZONE2_S_PEVRAOBL_LSTM_predict.csv')
 
-# path_BI_LSTM_ARHENERG_ZONE1_E_PARHENER = os.path.join(Bi_LSTM_path, 'ARHENERG_ZONE1_E_PARHENER_Bi-LSTM_predict.csv')
-path_BI_LSTM_DEKENERG_ZONE2_S_PAMURENE = os.path.join(Bi_LSTM_path, 'DEKENERG_ZONE2_S_PAMURENE_Bi-LSTM_predict.csv')
-path_BI_LSTM_DEKENERG_ZONE2_S_PEVRAOBL = os.path.join(Bi_LSTM_path, 'DEKENERG_ZONE2_S_PEVRAOBL_Bi-LSTM_predict.csv')
+# path_BI_LSTM_ARHENERG_ZONE1_E_PARHENER = os.path.join(Bi_LSTM_path, 'ARHENERG_ZONE1_E_PARHENER_Bi_LSTM_predict.csv')
+path_BI_LSTM_DEKENERG_ZONE2_S_PAMURENE = os.path.join(Bi_LSTM_path, 'DEKENERG_ZONE2_S_PAMURENE_Bi_LSTM_predict.csv')
+path_BI_LSTM_DEKENERG_ZONE2_S_PEVRAOBL = os.path.join(Bi_LSTM_path, 'DEKENERG_ZONE2_S_PEVRAOBL_Bi_LSTM_predict.csv')
 
 # path_CNN_Bi_LSTM_ARHENERG_ZONE1_E_PARHENER = os.path.join(CNN_Bi_LSTM_path, 'ARHENERG_ZONE1_E_PARHENER_CNN-Bi-LSTM_predict.csv')
-path_CNN_Bi_LSTM_DEKENERG_ZONE2_S_PAMURENE = os.path.join(CNN_Bi_LSTM_path, 'DEKENERG_ZONE2_S_PAMURENE_CNN-Bi-LSTM_predict.csv')
-path_CNN_Bi_LSTM_DEKENERG_ZONE2_S_PEVRAOBL = os.path.join(CNN_Bi_LSTM_path, 'DEKENERG_ZONE2_S_PEVRAOBL_CNN-Bi-LSTM_predict.csv')
+path_CNN_Bi_LSTM_DEKENERG_ZONE2_S_PAMURENE = os.path.join(CNN_Bi_LSTM_path, 'DEKENERG_ZONE2_S_PAMURENE_CNN_Bi_LSTM_predict.csv')
+path_CNN_Bi_LSTM_DEKENERG_ZONE2_S_PEVRAOBL = os.path.join(CNN_Bi_LSTM_path, 'DEKENERG_ZONE2_S_PEVRAOBL_CNN_Bi_LSTM_predict.csv')
 
 # path_CNN_LSTM_ARHENERG_ZONE1_E_PARHENER = os.path.join(CNN_LSTM_path, 'ARHENERG_ZONE1_E_PARHENER_CNN-LSTM_predict.csv')
-path_CNN_LSTM_DEKENERG_ZONE2_S_PAMURENE = os.path.join(CNN_LSTM_path, 'DEKENERG_ZONE2_S_PAMURENE_CNN-LSTM_predict.csv')
-path_CNN_LSTM_DEKENERG_ZONE2_S_PEVRAOBL = os.path.join(CNN_LSTM_path, 'DEKENERG_ZONE2_S_PEVRAOBL_CNN-LSTM_predict.csv')
+path_CNN_LSTM_DEKENERG_ZONE2_S_PAMURENE = os.path.join(CNN_LSTM_path, 'DEKENERG_ZONE2_S_PAMURENE_CNN_LSTM_predict.csv')
+path_CNN_LSTM_DEKENERG_ZONE2_S_PEVRAOBL = os.path.join(CNN_LSTM_path, 'DEKENERG_ZONE2_S_PEVRAOBL_CNN_LSTM_predict.csv')
 
 path_XGBoost_DEKENERG_ZONE2_S_PAMURENE = os.path.join(XGBoost_path, 'DEKENERG_ZONE2_S_PAMURENE_XGBoost_predict.scv')
 path_XGBoost_DEKENERG_ZONE2_S_PEVRAOBL = os.path.join(XGBoost_path, "DEKENERG_ZONE2_S_PEVRAOBL_XGBoost_predict.scv")
