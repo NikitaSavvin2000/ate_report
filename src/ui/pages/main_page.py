@@ -34,7 +34,7 @@ Bi_LSTM_path = os.path.join('src', 'data', 'Bi-LSTM')
 CNN_Bi_LSTM_path = os.path.join('src', 'data', 'CNN-Bi-LSTM')
 CNN_LSTM_path = os.path.join('src', 'data', 'CNN-LSTM')
 XGBoost_path = os.path.join('src', 'data', 'XGBoost')
-
+"src/data/CNN-Bi-LSTM/DEKENERG_ZONE2_S_PAMURENE_CNN-Bi-LSTM_predict.csv"
 
 # path_LSTM_ARHENERG_ZONE1_E_PARHENER = os.path.join(LSTM_path, 'ARHENERG_ZONE1_E_PARHENER_LSTM_predict.csv')
 path_LSTM_DEKENERG_ZONE2_S_PAMURENE = os.path.join(LSTM_path, 'DEKENERG_ZONE2_S_PAMURENE_LSTM_predict.csv')

@@ -14,6 +14,7 @@ RUN pip install pdm
 RUN pdm install --prod --no-lock --no-editable
 RUN pdm build
 RUN pdm install
+RUN export PYTHONPATH=$PWD/src:$PYTHONPATH
 
 
 EXPOSE 8501
