@@ -14,7 +14,7 @@ st.set_page_config(layout='wide')
 ssl._create_default_https_context = ssl._create_stdlib_context
 
 
-ats_data = os.path.join('data', 'ats_data')
+ats_data = os.path.join('src', 'data', 'ats_data')
 
 # path_ARHENERG_ZONE1_E_PARHENER = os.path.join(ats_data, 'ARHENERG_ZONE1_E_PARHENER.csv')
 path_DEKENERG_ZONE2_S_PAMURENE = os.path.join(ats_data, 'DEKENERG_ZONE2_S_PAMURENE.csv')
@@ -29,11 +29,11 @@ df_DEKENERG_ZONE2_S_PEVRAOBL = pd.read_csv(path_DEKENERG_ZONE2_S_PEVRAOBL)
 df_DEKENERG_ZONE2_S_PAMURENE = df_DEKENERG_ZONE2_S_PAMURENE.drop(columns=['Unnamed: 0'])
 df_DEKENERG_ZONE2_S_PEVRAOBL = df_DEKENERG_ZONE2_S_PEVRAOBL.drop(columns=['Unnamed: 0'])
 
-LSTM_path = os.path.join('data', 'LSTM')
-Bi_LSTM_path = os.path.join('data', 'Bi-LSTM')
-CNN_Bi_LSTM_path = os.path.join('data', 'CNN-Bi-LSTM')
-CNN_LSTM_path = os.path.join('data', 'CNN-LSTM')
-XGBoost_path = os.path.join('data', 'XGBoost')
+LSTM_path = os.path.join('src', 'data', 'LSTM')
+Bi_LSTM_path = os.path.join('src', 'data', 'Bi-LSTM')
+CNN_Bi_LSTM_path = os.path.join('src', 'data', 'CNN-Bi-LSTM')
+CNN_LSTM_path = os.path.join('src', 'data', 'CNN-LSTM')
+XGBoost_path = os.path.join('src', 'data', 'XGBoost')
 
 # path_LSTM_ARHENERG_ZONE1_E_PARHENER = os.path.join(LSTM_path, 'ARHENERG_ZONE1_E_PARHENER_LSTM_predict.csv')
 path_LSTM_DEKENERG_ZONE2_S_PAMURENE = os.path.join(LSTM_path, 'DEKENERG_ZONE2_S_PAMURENE_LSTM_predict.csv')

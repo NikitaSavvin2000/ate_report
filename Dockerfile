@@ -4,7 +4,9 @@ RUN apt-get update
 RUN apt-get install -y vim
 
 WORKDIR app
-COPY ./ ./
+WORKDIR /app
+
+COPY ./src ./src
 
 COPY pyproject.toml pdm.lock README.md ./
 RUN apt-get update && apt-get install -y poppler-utils
@@ -14,7 +16,6 @@ RUN pip install pdm
 RUN pdm install --prod --no-lock --no-editable
 RUN pdm build
 RUN pdm install
-
 
 EXPOSE 8501
 
