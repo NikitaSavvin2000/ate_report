@@ -153,7 +153,7 @@ df_all_DEKENERG_ZONE2_S_PEVRAOBL = df_all_DEKENERG_ZONE2_S_PEVRAOBL.iloc[:(24*31
 
 st.write(f"# Glossary")
 
-st.markdown("## Отчет по прогнозированию энергопотребления командой [Horizon TSD](https://time-horizon.ru)")
+st.markdown("## Отчет по прогнозированию энергопотребления подготовленный командой [Horizon TSD](https://time-horizon.ru)")
 
 #
 # st.write("""
