@@ -26,7 +26,7 @@ ssl._create_default_https_context = ssl._create_stdlib_context
 
 cwd = os.getcwd()
 
-ats_data = os.path.join(cwd, 'src', 'data', 'ats_data')
+ats_data = os.path.join('src', 'data', 'ats_data')
 
 # path_ARHENERG_ZONE1_E_PARHENER = os.path.join(ats_data, 'ARHENERG_ZONE1_E_PARHENER.csv')
 path_DEKENERG_ZONE2_S_PAMURENE = os.path.join(ats_data, 'DEKENERG_ZONE2_S_PAMURENE.csv')
