@@ -4,7 +4,6 @@ RUN apt-get update && apt-get install -y vim poppler-utils
 
 WORKDIR /app
 
-# Копируем всё содержимое проекта (кроме указанного в .dockerignore)
 COPY . .
 
 RUN pip install -U pip setuptools wheel && \
