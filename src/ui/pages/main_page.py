@@ -9,7 +9,6 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import numpy as np
 
-cwd = os.getcwd()
 st.set_page_config(layout='wide')
 
 ssl._create_default_https_context = ssl._create_stdlib_context
@@ -25,18 +24,17 @@ path_DEKENERG_ZONE2_S_PEVRAOBL = os.path.join(ats_data, 'DEKENERG_ZONE2_S_PEVRAO
 
 # df_ARHENERG_ZONE1_E_PARHENER = pd.read_csv(path_ARHENERG_ZONE1_E_PARHENER)
 df_DEKENERG_ZONE2_S_PAMURENE = pd.read_csv(path_DEKENERG_ZONE2_S_PAMURENE)
-st.write(df_DEKENERG_ZONE2_S_PAMURENE)
 df_DEKENERG_ZONE2_S_PEVRAOBL = pd.read_csv(path_DEKENERG_ZONE2_S_PEVRAOBL)
 
 # df_ARHENERG_ZONE1_E_PARHENER = df_ARHENERG_ZONE1_E_PARHENER.drop(columns=['Unnamed: 0'])
 df_DEKENERG_ZONE2_S_PAMURENE = df_DEKENERG_ZONE2_S_PAMURENE.drop(columns=['Unnamed: 0'])
 df_DEKENERG_ZONE2_S_PEVRAOBL = df_DEKENERG_ZONE2_S_PEVRAOBL.drop(columns=['Unnamed: 0'])
 
-LSTM_path = os.path.join(cwd, 'src', 'data', 'LSTM')
-Bi_LSTM_path = os.path.join(cwd, 'src', 'data', 'Bi-LSTM')
-CNN_Bi_LSTM_path = os.path.join(cwd, 'src', 'data', 'CNN-Bi-LSTM')
-CNN_LSTM_path = os.path.join(cwd, 'src', 'data', 'CNN-LSTM')
-XGBoost_path = os.path.join(cwd, 'src', 'data', 'XGBoost')
+LSTM_path = os.path.join('src', 'data', 'LSTM')
+Bi_LSTM_path = os.path.join('src', 'data', 'Bi-LSTM')
+CNN_Bi_LSTM_path = os.path.join('src', 'data', 'CNN-Bi-LSTM')
+CNN_LSTM_path = os.path.join('src', 'data', 'CNN-LSTM')
+XGBoost_path = os.path.join('src', 'data', 'XGBoost')
 
 # path_LSTM_ARHENERG_ZONE1_E_PARHENER = os.path.join(LSTM_path, 'ARHENERG_ZONE1_E_PARHENER_LSTM_predict.csv')
 path_LSTM_DEKENERG_ZONE2_S_PAMURENE = os.path.join(LSTM_path, 'DEKENERG_ZONE2_S_PAMURENE_LSTM_predict.csv')
