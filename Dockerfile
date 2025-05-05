@@ -6,7 +6,7 @@ RUN apt-get install -y vim
 WORKDIR app
 WORKDIR /app
 
-COPY ./src ./src
+COPY . .
 
 COPY pyproject.toml pdm.lock README.md ./
 RUN apt-get update && apt-get install -y poppler-utils
