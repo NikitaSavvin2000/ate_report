@@ -1,17 +1,6 @@
 import asyncio
 import streamlit as st
-import pandas as pd
 
-from ui.utils.greating import greatings
-
-from ui.utils.data_processing import check_authentication
-
-import os
-from datetime import datetime, timedelta
-from dateutil.relativedelta import relativedelta
-import calendar
-from itertools import zip_longest
-import requests
 import ssl
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 import os
@@ -24,7 +13,6 @@ st.set_page_config(layout='wide')
 
 ssl._create_default_https_context = ssl._create_stdlib_context
 
-cwd = os.getcwd()
 
 ats_data = os.path.join('src', 'data', 'ats_data')
 
@@ -41,11 +29,11 @@ df_DEKENERG_ZONE2_S_PEVRAOBL = pd.read_csv(path_DEKENERG_ZONE2_S_PEVRAOBL)
 df_DEKENERG_ZONE2_S_PAMURENE = df_DEKENERG_ZONE2_S_PAMURENE.drop(columns=['Unnamed: 0'])
 df_DEKENERG_ZONE2_S_PEVRAOBL = df_DEKENERG_ZONE2_S_PEVRAOBL.drop(columns=['Unnamed: 0'])
 
-LSTM_path = os.path.join(cwd, 'src', 'data', 'LSTM')
-Bi_LSTM_path = os.path.join(cwd, 'src', 'data', 'Bi-LSTM')
-CNN_Bi_LSTM_path = os.path.join(cwd, 'src', 'data', 'CNN-Bi-LSTM')
-CNN_LSTM_path = os.path.join(cwd, 'src', 'data', 'CNN-LSTM')
-XGBoost_path = os.path.join(cwd, 'src', 'data', 'XGBoost')
+LSTM_path = os.path.join('src', 'data', 'LSTM')
+Bi_LSTM_path = os.path.join('src', 'data', 'Bi-LSTM')
+CNN_Bi_LSTM_path = os.path.join('src', 'data', 'CNN-Bi-LSTM')
+CNN_LSTM_path = os.path.join('src', 'data', 'CNN-LSTM')
+XGBoost_path = os.path.join('src', 'data', 'XGBoost')
 
 
 # path_LSTM_ARHENERG_ZONE1_E_PARHENER = os.path.join(LSTM_path, 'ARHENERG_ZONE1_E_PARHENER_LSTM_predict.csv')
