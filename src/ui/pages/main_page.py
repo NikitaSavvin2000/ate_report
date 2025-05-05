@@ -44,8 +44,8 @@ path_BI_LSTM_DEKENERG_ZONE2_S_PAMURENE = os.path.join(Bi_LSTM_path, 'DEKENERG_ZO
 path_BI_LSTM_DEKENERG_ZONE2_S_PEVRAOBL = os.path.join(Bi_LSTM_path, 'DEKENERG_ZONE2_S_PEVRAOBL_Bi_LSTM_predict.csv')
 
 # path_CNN_Bi_LSTM_ARHENERG_ZONE1_E_PARHENER = os.path.join(CNN_Bi_LSTM_path, 'ARHENERG_ZONE1_E_PARHENER_CNN-Bi-LSTM_predict.csv')
-path_CNN_Bi_LSTM_DEKENERG_ZONE2_S_PAMURENE = os.path.join(CNN_Bi_LSTM_path, 'DEKENERG_ZONE2_S_PAMURENE_CNN_Bi_LSTM_predict.csv')
-path_CNN_Bi_LSTM_DEKENERG_ZONE2_S_PEVRAOBL = os.path.join(CNN_Bi_LSTM_path, 'DEKENERG_ZONE2_S_PEVRAOBL_CNN_Bi_LSTM_predict.csv')
+path_CNN_Bi_LSTM_DEKENERG_ZONE2_S_PAMURENE = os.path.join(CNN_Bi_LSTM_path, 'DEKENERG_ZONE2_S_PAMURENE_CNN_BI_LSTM_predict.csv')
+path_CNN_Bi_LSTM_DEKENERG_ZONE2_S_PEVRAOBL = os.path.join(CNN_Bi_LSTM_path, 'DEKENERG_ZONE2_S_PEVRAOBL_CNN_BI_LSTM_predict.csv')
 
 # path_CNN_LSTM_ARHENERG_ZONE1_E_PARHENER = os.path.join(CNN_LSTM_path, 'ARHENERG_ZONE1_E_PARHENER_CNN-LSTM_predict.csv')
 path_CNN_LSTM_DEKENERG_ZONE2_S_PAMURENE = os.path.join(CNN_LSTM_path, 'DEKENERG_ZONE2_S_PAMURENE_CNN_LSTM_predict.csv')
@@ -153,7 +153,8 @@ df_all_DEKENERG_ZONE2_S_PEVRAOBL = df_all_DEKENERG_ZONE2_S_PEVRAOBL.iloc[:(24*31
 
 st.write(f"# Glossary")
 
-st.write("## Отчет по прогнозированию энергопотребления командой 'Horizon TSD'")
+st.markdown("## Отчет по прогнозированию энергопотребления командой [Horizon TSD](https://time-horizon.ru)")
+
 #
 # st.write("""
 # ### Структура отчета:
