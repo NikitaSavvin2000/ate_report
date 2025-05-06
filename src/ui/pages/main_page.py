@@ -358,7 +358,7 @@ def our_forecast_graph(df, df_our, name):
             mode="lines",
             line=dict(color="rgba(0,0,0,0)"),
             showlegend=True,
-            name=f" R = {round(r2, 3)} %"
+            name=f" R = {round(r2, 3)}"
         )
     )
 
@@ -368,7 +368,7 @@ def our_forecast_graph(df, df_our, name):
             mode="lines",
             line=dict(color="rgba(0,0,0,0)"),
             showlegend=True,
-            name=f" RMSE = {round(rmse, 3)} %"
+            name=f" RMSE = {round(rmse, 3)}"
         )
     )
 
