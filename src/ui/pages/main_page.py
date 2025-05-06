@@ -21,6 +21,30 @@ path_DEKENERG_ZONE2_S_PAMURENE = os.path.join(ats_data, 'DEKENERG_ZONE2_S_PAMURE
 path_DEKENERG_ZONE2_S_PEVRAOBL = os.path.join(ats_data, 'DEKENERG_ZONE2_S_PEVRAOBL.csv')
 
 
+# path_to_read_cast_1 = "/Users/nikitasavvin/Desktop/Business/repo/ate_report/src/data/AutoNHITS/DEKENERG_ZONE2_S_PAMURENE_AutoNHITS_predict.xlsx"
+# path_to_read_cast_2 = "/Users/nikitasavvin/Desktop/Business/repo/ate_report/src/data/AutoNHITS/DEKENERG_ZONE2_S_PEVRAOBL_AutoNHITS_predict.xlsx"
+#
+# df1 = pd.read_excel(path_to_read_cast_1)
+# df2 = pd.read_excel(path_to_read_cast_2)
+# st.write(df1)
+
+
+# df1 = df1.rename(columns={"VC_факт_pred": "consumption", "ds": "Datetime",})
+# df1 = df1.drop(columns=["unique_id", "VC_факт", "VC_ППП", "minute", "dayofweek","dayofmonth","day_zone_encoded",])
+# st.write(df1.columns)
+# df2 = df2.rename(columns={"VC_факт_pred": "consumption", "ds": "Datetime",})
+# df2 = df2.drop(columns=["unique_id", "VC_факт", "I_откл ph", "second", "VC_ППП"])
+
+# df1.to_csv(path1)
+# df2.to_csv(path2)
+
+# path_to_save_cast_1 = "/Users/nikitasavvin/Desktop/Business/repo/ate_report/src/data/AutoNHITS/DEKENERG_ZONE2_S_PAMURENE_AutoNHITS_predict.csv"
+# path_to_save_cast_2 = "/Users/nikitasavvin/Desktop/Business/repo/ate_report/src/data/AutoNHITS/DEKENERG_ZONE2_S_PEVRAOBL_AutoNHITS_predict.csv"
+#
+# df1.to_csv(path_to_save_cast_1)
+# df2.to_csv(path_to_save_cast_2)
+
+
 # df_ARHENERG_ZONE1_E_PARHENER = pd.read_csv(path_ARHENERG_ZONE1_E_PARHENER)
 df_DEKENERG_ZONE2_S_PAMURENE = pd.read_csv(path_DEKENERG_ZONE2_S_PAMURENE)
 df_DEKENERG_ZONE2_S_PEVRAOBL = pd.read_csv(path_DEKENERG_ZONE2_S_PEVRAOBL)
@@ -34,6 +58,7 @@ Bi_LSTM_path = os.path.join('src', 'data', 'Bi_LSTM')
 CNN_Bi_LSTM_path = os.path.join('src', 'data', 'CNN_Bi_LSTM')
 CNN_LSTM_path = os.path.join('src', 'data', 'CNN_LSTM')
 XGBoost_path = os.path.join('src', 'data', 'XGBoost')
+AutoNHITS_path = os.path.join('src', 'data', 'AutoNHITS')
 
 # path_LSTM_ARHENERG_ZONE1_E_PARHENER = os.path.join(LSTM_path, 'ARHENERG_ZONE1_E_PARHENER_LSTM_predict.csv')
 path_LSTM_DEKENERG_ZONE2_S_PAMURENE = os.path.join(LSTM_path, 'DEKENERG_ZONE2_S_PAMURENE_LSTM_predict.csv')
@@ -53,6 +78,9 @@ path_CNN_LSTM_DEKENERG_ZONE2_S_PEVRAOBL = os.path.join(CNN_LSTM_path, 'DEKENERG_
 
 path_XGBoost_DEKENERG_ZONE2_S_PAMURENE = os.path.join(XGBoost_path, 'DEKENERG_ZONE2_S_PAMURENE_XGBoost_predict.scv')
 path_XGBoost_DEKENERG_ZONE2_S_PEVRAOBL = os.path.join(XGBoost_path, "DEKENERG_ZONE2_S_PEVRAOBL_XGBoost_predict.scv")
+
+path_AutoNHITS_DEKENERG_ZONE2_S_PAMURENE = os.path.join(AutoNHITS_path, 'DEKENERG_ZONE2_S_PAMURENE_AutoNHITS_predict.csv')
+path_AutoNHITS_DEKENERG_ZONE2_S_PEVRAOBL = os.path.join(AutoNHITS_path, "DEKENERG_ZONE2_S_PEVRAOBL_AutoNHITS_predict.csv")
 
 
 # predict_LSTM_df_ARHENERG_ZONE1_E_PARHENER_df = pd.read_csv(path_LSTM_ARHENERG_ZONE1_E_PARHENER)
@@ -74,6 +102,8 @@ predict_CNN_LSTM_df_DEKENERG_ZONE2_S_PEVRAOBL_df  = pd.read_csv(path_CNN_LSTM_DE
 predict_XGBoost_df_DEKENERG_ZONE2_S_PAMURENE_df = pd.read_csv(path_XGBoost_DEKENERG_ZONE2_S_PAMURENE)
 predict_XGBoost_df_DEKENERG_ZONE2_S_PEVRAOBL_df = pd.read_csv(path_XGBoost_DEKENERG_ZONE2_S_PEVRAOBL)
 
+predict_AutoNHITS_df_DEKENERG_ZONE2_S_PAMURENE_df = pd.read_csv(path_AutoNHITS_DEKENERG_ZONE2_S_PAMURENE)
+predict_AutoNHITS_df_DEKENERG_ZONE2_S_PEVRAOBL_df = pd.read_csv(path_AutoNHITS_DEKENERG_ZONE2_S_PEVRAOBL)
 
 
 df_all_DEKENERG_ZONE2_S_PAMURENE = df_DEKENERG_ZONE2_S_PAMURENE.copy()
@@ -105,6 +135,11 @@ predict_XGBoost_df_DEKENERG_ZONE2_S_PAMURENE_df['Datetime'] = pd.to_datetime(pre
 predict_XGBoost_df_DEKENERG_ZONE2_S_PAMURENE_df['datetime_str'] = predict_XGBoost_df_DEKENERG_ZONE2_S_PAMURENE_df['Datetime'].dt.strftime('%Y-%m-%d %H:%M:%S')
 df_all_DEKENERG_ZONE2_S_PAMURENE = df_all_DEKENERG_ZONE2_S_PAMURENE.merge(predict_XGBoost_df_DEKENERG_ZONE2_S_PAMURENE_df[['datetime_str', 'consumption']], on='datetime_str', how='left')
 df_all_DEKENERG_ZONE2_S_PAMURENE = df_all_DEKENERG_ZONE2_S_PAMURENE.rename(columns={"consumption": "XGBoost"})
+
+predict_AutoNHITS_df_DEKENERG_ZONE2_S_PAMURENE_df['Datetime'] = pd.to_datetime(predict_AutoNHITS_df_DEKENERG_ZONE2_S_PAMURENE_df['Datetime'], format='%Y-%m-%dT%H:%M:%S')
+predict_AutoNHITS_df_DEKENERG_ZONE2_S_PAMURENE_df['datetime_str'] = predict_AutoNHITS_df_DEKENERG_ZONE2_S_PAMURENE_df['Datetime'].dt.strftime('%Y-%m-%d %H:%M:%S')
+df_all_DEKENERG_ZONE2_S_PAMURENE = df_all_DEKENERG_ZONE2_S_PAMURENE.merge(predict_AutoNHITS_df_DEKENERG_ZONE2_S_PAMURENE_df[['datetime_str', 'consumption']], on='datetime_str', how='left')
+df_all_DEKENERG_ZONE2_S_PAMURENE = df_all_DEKENERG_ZONE2_S_PAMURENE.rename(columns={"consumption": "AutoNHITS"})
 
 
 df_all_DEKENERG_ZONE2_S_PAMURENE = df_all_DEKENERG_ZONE2_S_PAMURENE.drop('datetime_str', axis=1)
@@ -142,6 +177,13 @@ df_all_DEKENERG_ZONE2_S_PEVRAOBL = df_all_DEKENERG_ZONE2_S_PEVRAOBL.merge(predic
 df_all_DEKENERG_ZONE2_S_PEVRAOBL = df_all_DEKENERG_ZONE2_S_PEVRAOBL.rename(columns={"consumption": "XGBoost"})
 
 
+predict_AutoNHITS_df_DEKENERG_ZONE2_S_PEVRAOBL_df['Datetime'] = pd.to_datetime(predict_AutoNHITS_df_DEKENERG_ZONE2_S_PEVRAOBL_df['Datetime'], format='%Y-%m-%dT%H:%M:%S')
+predict_AutoNHITS_df_DEKENERG_ZONE2_S_PEVRAOBL_df['datetime_str'] = predict_AutoNHITS_df_DEKENERG_ZONE2_S_PEVRAOBL_df['Datetime'].dt.strftime('%Y-%m-%d %H:%M:%S')
+df_all_DEKENERG_ZONE2_S_PEVRAOBL = df_all_DEKENERG_ZONE2_S_PEVRAOBL.merge(predict_AutoNHITS_df_DEKENERG_ZONE2_S_PEVRAOBL_df[['datetime_str', 'consumption']], on='datetime_str', how='left')
+df_all_DEKENERG_ZONE2_S_PEVRAOBL = df_all_DEKENERG_ZONE2_S_PEVRAOBL.rename(columns={"consumption": "AutoNHITS"})
+
+
+
 df_all_DEKENERG_ZONE2_S_PEVRAOBL = df_all_DEKENERG_ZONE2_S_PEVRAOBL.drop('datetime_str', axis=1)
 df_all_DEKENERG_ZONE2_S_PEVRAOBL = df_all_DEKENERG_ZONE2_S_PEVRAOBL.iloc[:(24*31)-1]
 
@@ -153,47 +195,31 @@ df_all_DEKENERG_ZONE2_S_PEVRAOBL = df_all_DEKENERG_ZONE2_S_PEVRAOBL.iloc[:(24*31
 
 st.write(f"# Glossary")
 
-st.markdown("## Отчет по прогнозированию энергопотребления подготовленный командой [Horizon TSD](https://time-horizon.ru)")
-
-#
-# st.write("""
-# ### Структура отчета:
-# 1. **Сравнение прогнозов АТС**
-#    Анализ точности прогноза по колонке `VC_ППП` (прогноз) в сравнении с фактическими значениями `VC_факт` из исходных данных.
-#    *Источник данных:* [АТС Энерго](https://www.atsenergo.ru/results/market/mtncz) (период: с 2011 года по июнь 2016 года).
-#    *Примечание:* После июня 2016 года данные по `VC_факт` и `VC_ППП` в отчетах отсутствуют.
-#
-# 2. **Прогноз Horizon TSD**
-#    - Представление модели прогнозирования команды
-#    - Метрики качества прогноза
-#    - Сравнение с прогнозом АТС и демонстрация улучшений
-#
-# 3. **Экспериментальные данные**
-#    Анализ на двух тестовых выборках:
-#    - ОАО 'ДЭК' ГТП: **PAMURENE**
-#    - ОАО 'ДЭК' ГТП: **PEVRAOBL**
-# """)
+st.markdown("## Отчет подготовлен командой [Horizon TSD](https://time-horizon.ru)")
 
 
 st.markdown("""
 ### **Сравнение прогнозов АТС**  
-Анализ точности прогноза по колонке `VC_ППП` (прогнозные значения) в сравнении с фактическими значениями `VC_факт` из исходных данных.  
+ Анализ точности прогноза по колонке `VC_ППП` (прогнозные значения) в сравнении с фактическими значениями `VC_факт` из исходных данных.  
 
-*Обоснование выбора колонки:*  
-Согласно документации к данным, **`VC_ППП`** — это объем электрической энергии, включенный ГП (ЭСК, ЭСО) в объемы планового почасового потребления. Поэтому данная колонка была использована в качестве эталонного прогноза для сравнения.  
+#### **Обоснование выбора колонки:**  
+ Согласно документации к данным, **`VC_ППП`** — это объем электрической энергии, включенный ГП (ЭСК, ЭСО) в объемы планового почасового потребления. Поэтому данная колонка была использована в качестве эталонного прогноза для сравнения.  
 
-*Источник данных:* [АТС Энерго](https://www.atsenergo.ru/results/market/mtncz) (период: с 2011 года по июнь 2016 года).  
-*Примечание:* После июня 2016 года данные по `VC_факт` и `VC_ППП` в отчетах отсутствуют.  
+ *Источник данных:* [АТС Энерго](https://www.atsenergo.ru/results/market/mtncz) (период: с 2011 года по июнь 2016 года).  
+ *Примечание:* После июня 2016 года данные по `VC_факт` и `VC_ППП` в отчетах отсутствуют.  
 
 ### **Прогноз Horizon TSD**  
-- Представление модели прогнозирования команды  
-- Метрики качества прогноза  
-- Сравнение с прогнозом АТС и демонстрация улучшений  
+ - Представление модели прогнозирования команды  
+ - Метрики качества прогноза  
+ - Сравнение с прогнозом АТС и демонстрация улучшений  
 
 ### **Экспериментальные данные**  
 Анализ на двух тестовых выборках:  
-- ОАО 'ДЭК' ГТП: **PAMURENE**  
-- ОАО 'ДЭК' ГТП: **PEVRAOBL**  
+ - ОАО 'ДЭК' ГТП: **PAMURENE**  
+ - ОАО 'ДЭК' ГТП: **PEVRAOBL**  
+
+### **Краткие выводы:**  
+ ##### ✅ Все представленные модели показали улучшение точности от 4 до 30% по сравнению с VC_ППП на обоих датасетах
 """)
 
 
@@ -435,11 +461,10 @@ def our_metrix_visual(rmse, r2, mae, mape, wmape, our_rmse, our_r2, our_mae, our
 # @check_authentication
 async def main():
 
-
     st.markdown('---')
 
-    st.title('ОАО "ДЭК" ГТП: PAMURENE')
-    st.title('DEKENERG ZONE2 S PAMURENE')
+    st.title('ОАО "ДЭК" ГТП: PAMURENE | DEKENERG ZONE2 S PAMURENE')
+
     rmse, r2, mae, mape, wmape = atc_forecast_graph(df_DEKENERG_ZONE2_S_PAMURENE)
 
     ats_metrix_visual(rmse=rmse, r2=r2, mae=mae, mape=mape, wmape=wmape)
@@ -513,10 +538,9 @@ async def main():
     st.dataframe(df_all_DEKENERG_ZONE2_S_PAMURENE, use_container_width=True)
 
     st.markdown('---')
-
-
-    st.title('ОАО "ДЭК" ГТП: PEVRAOBL')
-    st.title('DEKENERG ZONE2 S PEVRAOBL')
+    st.divider()
+    st.divider()
+    st.title('ОАО "ДЭК" ГТП: PEVRAOBL | DEKENERG ZONE2 S PEVRAOBL')
     rmse, r2, mae, mape, wmape = atc_forecast_graph(df_DEKENERG_ZONE2_S_PEVRAOBL)
     ats_metrix_visual(rmse=rmse, r2=r2, mae=mae, mape=mape, wmape=wmape)
 
