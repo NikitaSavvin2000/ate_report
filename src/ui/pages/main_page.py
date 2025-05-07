@@ -444,11 +444,11 @@ def our_metrix_visual(rmse, r2, mae, mape, wmape, our_rmse, our_r2, our_mae, our
 
     cols[1].write(f'##### АТС R2 = {r2}')
     with cols[1].container(height=130):
-        st.metric("HORIZON R2", f"{our_r2} %", f"{r2_improve*(-1)}%")
+        st.metric("HORIZON R2", f"{our_r2}", f"{r2_improve*(-1)}")
 
     cols[2].write(f'##### АТС RMSE = {rmse}')
     with cols[2].container(height=130):
-        st.metric("HORIZON RMSE", f"{our_rmse} %", f"{rmse_improve}%")
+        st.metric("HORIZON RMSE", f"{our_rmse}", f"{rmse_improve}")
 
     cols[3].write(f'##### АТС MAE = {mae}%')
     with cols[3].container(height=130):
